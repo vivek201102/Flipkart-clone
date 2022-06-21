@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-// const mysql = require('mysql')
+const mysql = require('mysql')
 
 // require("./routes/users");
 
@@ -17,6 +17,8 @@ app.use(express.urlencoded({ extended: true }));
 const users_routes = require("./routes/user");
 
 const { db } = require("./config/db.config");
+
+// console.log(db);
 
 
 
