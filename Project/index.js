@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 const users_routes = require("./routes/user");
+const product_routes = require("./routes/product");
 
 const { db } = require("./config/db.config");
 
@@ -23,6 +24,7 @@ const { db } = require("./config/db.config");
 
 
 app.use("/users", users_routes);
+app.use("/product", product_routes);
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to admin panel" });

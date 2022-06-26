@@ -12,7 +12,7 @@ exports.createUser = async function (req, res) {
     let data = {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
-        contact_no: Number(req.body.contact_no),
+        contact_no: req.body.contact_no,
         email: req.body.email,
         gender: req.body.gender,
         password: md5.hex_md5(req.body.password),
